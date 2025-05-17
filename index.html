@@ -3,183 +3,328 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Мои сертификаты | Галерея</title>
+  <title>Мои сертификаты | Портфолио</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* ===================================================
-       CSS-переменные: темная палитра и музейные акценты
-       =================================================== */
+    /* CSS-переменные */
     :root {
       --clr-bg: #111111;
       --clr-panel: #1e1e1e;
+      --clr-card: #252525;
       --clr-frame: #444444;
-      --clr-text: #ececec;
-      --clr-accent: dark;
-      --clr-muted: #888888;
-      --font-heading: 'Playfair Display', serif;
+      --clr-text: #f5f5f5;
+      --clr-accent: #4d8bff;
+      --clr-muted: #aaaaaa;
+      --font-heading: 'Montserrat', sans-serif;
       --font-body: 'Open Sans', sans-serif;
-      --radius: 4px;
-      --transition: 0.3s ease;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+      --radius: 8px;
+      --radius-lg: 12px;
+      --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.4);
     }
 
-    /* ====================
-       Сброс и базовые стили
-       ==================== */
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
+    /* Базовые стили */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       background: var(--clr-bg);
       color: var(--clr-text);
       font-family: var(--font-body);
-      line-height:1.6;
-      min-height:100vh;
+      line-height: 1.6;
+      min-height: 100vh;
     }
-    a { color: var(--clr-accent); text-decoration:none; transition: color var(--transition); }
+    a { color: var(--clr-accent); text-decoration: none; transition: color var(--transition); }
     a:hover { color: var(--clr-text); }
-    img { display:block; max-width:100%; height:auto; }
-    .container { width:min(90%,1200px); margin:0 auto; padding:2rem 0; }
-    h1,h2 {
+    img { display: block; max-width: 100%; height: auto; }
+    .container { width: min(90%, 1200px); margin: 0 auto; padding: 2rem 1rem; }
+    h1, h2, h3 {
       font-family: var(--font-heading);
       color: var(--clr-text);
-      text-align:center;
-      margin-bottom:1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
     }
-    p { color: var(--clr-muted); text-align:center; margin-bottom:2rem; }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; position: relative; }
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--clr-accent);
+      border-radius: 3px;
+    }
+    p { color: var(--clr-muted); margin-bottom: 1.5rem; }
 
-    /* =======
-       Шапка
-       ======= */
+    /* Шапка */
     header {
       background: var(--clr-panel);
-      padding:1rem 0;
+      padding: 1rem 0;
       box-shadow: var(--shadow);
-      position: sticky; top:0; z-index:100;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
     }
-    header .logo {
+    .header-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: min(90%, 1200px);
+      margin: 0 auto;
+    }
+    .logo {
       font-family: var(--font-heading);
-      font-size:1.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--clr-text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .logo i { color: var(--clr-accent); }
+    nav { display: flex; gap: 1.5rem; }
+    nav a {
+      font-weight: 600;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--clr-accent);
+      transition: width var(--transition);
+    }
+    nav a:hover::after { width: 100%; }
+
+    /* Обо мне */
+    #about { text-align: center; }
+    #about p { max-width: 800px; margin: 0 auto 2rem; }
+
+    /* Навыки */
+    .skills-list {
+      list-style: none;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .skills-list li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--clr-muted);
+    }
+    .skills-list li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
       color: var(--clr-accent);
     }
-    nav { margin-top:0.5rem; }
-    nav a { margin: 0 1rem; font-weight:600; }
+    .skills-list strong { color: var(--clr-text); font-weight: 600; }
 
-    /* ======================
-       Секция галереи
-       ====================== */
-    #gallery { background: var(--clr-bg); padding:3rem 0; }
+    /* Галерея */
+    #gallery { text-align: center; }
     .gallery-grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-      gap:2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
     }
     .card {
-      background: var(--clr-panel);
-      padding:1rem;
-      border:6px solid var(--clr-frame);
+      background: var(--clr-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
       box-shadow: var(--shadow);
-      transition: transform var(--transition), border-color var(--transition);
+      transition: transform var(--transition), box-shadow var(--transition);
     }
     .card:hover {
       transform: translateY(-10px);
-      border-color: var(--clr-accent);
+      box-shadow: var(--shadow-hover);
     }
     .card img {
-      border-radius: var(--radius);
-      cursor: zoom-in;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
     }
+    .card:hover img { transform: scale(1.05); }
+    .card-content { padding: 1.5rem; }
     .card-title {
       font-family: var(--font-heading);
       color: var(--clr-text);
-      margin:0.75rem 0 0.25rem;
-      font-size:1.125rem;
-      text-align:center;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
     }
-    .card-date {
-      font-size:0.875rem;
-      color: var(--clr-muted);
-      text-align:center;
+    .badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--clr-accent);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      z-index: 1;
     }
 
-    /* ===========
-       Модальное окно
-       =========== */
+    /* Модальное окно */
     .modal-img {
       position: fixed;
-      top:0; left:0; right:0; bottom:0;
-      background: rgba(0,0,0,0.8);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
       display: none;
       align-items: center;
       justify-content: center;
-      z-index: 200;
+      z-index: 2000;
+      opacity: 0;
+      transition: opacity var(--transition);
     }
     .modal-img.show {
       display: flex;
+      opacity: 1;
     }
-    .modal-img .close-img {
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .close-img {
       position: absolute;
-      top:1.5rem;
-      right:1.5rem;
-      font-size:2rem;
+      top: -40px;
+      right: 0;
+      font-size: 2rem;
       color: var(--clr-text);
       cursor: pointer;
       transition: color var(--transition);
     }
-    .modal-img .close-img:hover {
-      color: var(--clr-accent);
-    }
+    .close-img:hover { color: var(--clr-accent); }
     .modal-img img {
-      max-width: 90%;
-      max-height: 90%;
-      border: 6px solid var(--clr-accent);
-      box-shadow: var(--shadow);
+      max-width: 100%;
+      max-height: 80vh;
       border-radius: var(--radius);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     }
 
-    /* ===========
-       Подвал
-       =========== */
+    /* Контакты */
+    #contact { text-align: center; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .contact-card {
+      background: var(--clr-card);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      transition: transform var(--transition);
+    }
+    .contact-card:hover { transform: translateY(-5px); }
+    .contact-card i {
+      font-size: 2rem;
+      color: var(--clr-accent);
+      margin-bottom: 1rem;
+    }
+    .contact-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .contact-card p, .contact-card a { color: var(--clr-muted); }
+
+    /* Подвал */
     footer {
       background: var(--clr-panel);
-      padding:2rem 0;
-      margin-top:3rem;
-      text-align:center;
-      font-size:0.875rem;
+      padding: 2rem 0;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: var(--clr-card);
+      border-radius: 50%;
+      color: var(--clr-text);
+      transition: all var(--transition);
+    }
+    .socials a:hover {
+      background: var(--clr-accent);
+      color: white;
+      transform: translateY(-3px);
+    }
+    .copyright {
+      font-size: 0.9rem;
       color: var(--clr-muted);
     }
-    footer .socials a {
-      margin:0 0.5rem;
-      font-size:1.25rem;
-      color: var(--clr-text);
-      transition: color var(--transition);
+
+    /* Анимации */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    footer .socials a:hover {
-      color: var(--clr-accent);
+    .fade-in { animation: fadeIn 0.8s ease forwards; }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      :root { --radius: 6px; }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.75rem; }
+      .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+      }
+      nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .container { padding: 1.5rem 1rem; }
+      .card { margin-bottom: 1.5rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .modal-img img { max-height: 70vh; }
     }
 
-    /* ============
-       Адаптивность
-       ============ */
-    @media (max-width:600px) {
-      header .logo { text-align:center; }
-      nav { text-align:center; margin-top:0.5rem; }
-      .gallery-grid { gap:1rem; }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.5rem; }
+      .card-content { padding: 1rem; }
+      .contact-card { padding: 1rem; }
     }
-    
   </style>
 </head>
 
 <body>
   <!-- Шапка -->
   <header>
-    <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-      <div class="logo">Галерея Сертификатов</div>
+    <div class="header-container">
+      <div class="logo">
+        <i class="fas fa-certificate"></i>
+        <span>Портфолио</span>
+      </div>
       <nav>
         <a href="#about">Обо мне</a>
-        <a href="#gallery">Галерея</a>
+        <a href="#skills">Навыки</a>
+        <a href="#gallery">Сертификаты</a>
         <a href="#contact">Контакты</a>
       </nav>
     </div>
@@ -187,78 +332,127 @@
 
   <!-- Обо мне -->
   <section id="about" class="container">
-    <h1>Обо мне</h1>
-<p>Я — студент направления Data Science с глубоким интересом к обработке и анализу данных. В процессе обучения я освоил сбор и предобработку больших объёмов информации, построение и оценку моделей машинного обучения, а также визуализацию результатов для поддержки принятия решений. Мои сертификаты и учебные проекты представлены здесь в формате музейной галереи, где каждый экспонат отражает моё профессиональное развитие.</p>
+    <h1 class="fade-in">Димаш Бекешев</h1>
+    <p class="fade-in">Я — студент направления Data Science с глубоким интересом к обработке и анализу данных. В процессе обучения я освоил сбор и предобработку больших объёмов информации, построение и оценку моделей машинного обучения, а также визуализацию результатов для поддержки принятия решений.</p>
   </section>
+
+  <!-- Навыки -->
   <section id="skills" class="container">
-  <h2>Ключевые навыки</h2>
-  <ul class="skills-list">
-    <li><strong>Языки программирования:</strong> Python (Advanced), SQL (Advanced)</li>
-    <li><strong>Веб-фреймворки:</strong> Django (Proficient), Django REST Framework</li>
-    <li><strong>Работа с базами данных:</strong> PostgreSQL, MySQL; оптимизация запросов, миграции</li>
-    <li><strong>Проектирование API:</strong> RESTful API, JSON, аутентификация и авторизация</li>
-    <li><strong>Инструменты разработки:</strong> Git</li>
-    <li><strong>Аналитика данных:</strong> Pandas, NumPy, Matplotlib</li>
-  </ul>
-</section>
+    <h2 class="fade-in">Ключевые навыки</h2>
+    <ul class="skills-list">
+      <li class="fade-in"><strong>Языки программирования:</strong> Python (Advanced), SQL (Advanced)</li>
+      <li class="fade-in"><strong>Веб-фреймворки:</strong> Django (Proficient), Django REST Framework</li>
+      <li class="fade-in"><strong>Базы данных:</strong> PostgreSQL, MySQL; оптимизация запросов, миграции</li>
+      <li class="fade-in"><strong>Проектирование API:</strong> RESTful API, JSON, аутентификация и авторизация</li>
+      <li class="fade-in"><strong>Инструменты разработки:</strong> Git</li>
+      <li class="fade-in"><strong>Аналитика данных:</strong> Pandas, NumPy, Matplotlib</li>
+    </ul>
+  </section>
 
   <!-- Галерея сертификатов -->
   <section id="gallery" class="container">
-    <h2>Галерея сертификатов</h2>
+    <h2 class="fade-in">Мои сертификаты</h2>
     <div class="gallery-grid">
       <!-- Карточка 1 -->
-      <div class="card">
-        <img src="pnq/cer1.png" alt="Сертификат 1">
-        <div class="card-title">Python для начинаюших</div>
+      <div class="card fade-in">
+        <div class="badge">Python</div>
+        <img src="pnq/cer1.png" alt="Сертификат по Python для начинающих">
+        <div class="card-content">
+          <h3 class="card-title">Python для начинающих</h3>
+        </div>
       </div>
+      
       <!-- Карточка 2 -->
-      <div class="card">
-<img src="pnq\Снимок экрана (176).png" alt="Сертификат 2">
-        <div class="card-title">Python</div>
+      <div class="card fade-in">
+        <div class="badge">Python</div>
+        <img src="pnq/Снимок экрана (176).png" alt="Сертификат по Python">
+        <div class="card-content">
+          <h3 class="card-title">Продвинутый Python</h3>
+        </div>
       </div>
+      
       <!-- Карточка 3 -->
-      <div class="card">
-        <img src="pnq/Снимок экрана (175).png" alt="Сертификат 3">
-        <div class="card-title">Fast-api</div>
+      <div class="card fade-in">
+        <div class="badge">Web</div>
+        <img src="pnq/Снимок экрана (175).png" alt="Сертификат по FastAPI">
+        <div class="card-content">
+          <h3 class="card-title">FastAPI</h3>
+        </div>
       </div>
-      <div class="card">
-        <img src="pnq/Снимок экрана (174).png" alt="Сертификат 3">
-        <div class="card-title">Сертификат о участии в кейс-чемпионате</div>
+      
+      <!-- Карточка 4 -->
+      <div class="card fade-in">
+        <div class="badge">Чемпионат</div>
+        <img src="pnq/Снимок экрана (174).png" alt="Сертификат о участии в кейс-чемпионате">
+        <div class="card-content">
+          <h3 class="card-title">Участник кейс-чемпионата</h3>
+        </div>
       </div>
-      <div class="card">
-        <img src="pnq/certificate-5df3773fb2a386002a2d8a7d.pdf.png" alt="Сертификат 3">
-        <div class="card-title">Sql</div>
+      
+      <!-- Карточка 5 -->
+      <div class="card fade-in">
+        <div class="badge">SQL</div>
+        <img src="pnq/certificate-5df3773fb2a386002a2d8a7d.pdf.png" alt="Сертификат по SQL">
+        <div class="card-content">
+          <h3 class="card-title">SQL и базы данных</h3>
+        </div>
       </div>
-      <div class="card">
-        <img src="pnq/Coursera 3HDEP06QV9N5.pdf.png" alt="Сертификат 3">
-        <div class="card-title">Введение в Data science</div>
+      
+      <!-- Карточка 6 -->
+      <div class="card fade-in">
+        <div class="badge">Data Science</div>
+        <img src="pnq/Coursera 3HDEP06QV9N5.pdf.png" alt="Сертификат по Data Science">
+        <div class="card-content">
+          <h3 class="card-title">Введение в Data Science</h3>
+        </div>
       </div>
-<div class="card">
-        <img src="pnq/Coursera CER0I29AP1GB.pdf.png" alt="Сертификат 3">
-        <div class="card-title">Tools for Data Science</div>
+      
+      <!-- Карточка 7 -->
+      <div class="card fade-in">
+        <div class="badge">Data Science</div>
+        <img src="pnq/Coursera CER0I29AP1GB.pdf.png" alt="Сертификат Tools for Data Science">
+        <div class="card-content">
+          <h3 class="card-title">Инструменты Data Science</h3>
+        </div>
       </div>
-
-      <!-- Добавьте еще по аналогии -->
     </div>
   </section>
 
-  <!-- Модальное окно для увеличения -->
+  <!-- Модальное окно -->
   <div id="imgModal" class="modal-img">
-    <span class="close-img">&times;</span>
-    <img id="modalImage" src="" alt="Увеличенное изображение">
+    <div class="modal-content">
+      <span class="close-img">&times;</span>
+      <img id="modalImage" src="" alt="Увеличенное изображение сертификата">
+    </div>
   </div>
 
-  <!-- Контакты и подвал -->
-  <footer id="contact">
-    <section id="contact" class="container">
-  <h2>Контактная информация</h2>
-  <p>Email: <a href="mailto:your.email@example.com">dimash.bekeshev2007@gmail.com</a></p>
-  <p>Телефон: +7 (707) 931 06-02</p>
-  <p>GitHub: <a href="https://github.com/BDaaac" target="_blank">github.com/BDaaac</a></p>
-  <p>Telegram: <a href="https://t.me/BDaaac" target="_blank">Dimash</a></p>
-</section>
-  </footer>
+  <!-- Контакты -->
+  <section id="contact" class="container">
+    <h2 class="fade-in">Контактная информация</h2>
+    <div class="contact-grid">
+     
+      
+      <div class="contact-card fade-in">
+        <i class="fas fa-phone"></i>
+        <h3>Телефон</h3>
+        <p>+7 (707) 931-06-02</p>
+      </div>
+      
+      <div class="contact-card fade-in">
+        <i class="fab fa-github"></i>
+        <h3>GitHub</h3>
+        <a href="https://github.com/BDaaac" target="_blank">github.com/BDaaac</a>
+      </div>
+      
+      <div class="contact-card fade-in">
+        <i class="fab fa-telegram"></i>
+        <h3>Telegram</h3>
+        <a href="https://t.me/BDaaac" target="_blank">@Dimash</a>
+      </div>
+    </div>
+  </section>
 
+  
   <script>
     // Lightbox для изображений
     document.querySelectorAll('.card img').forEach(img => {
@@ -267,18 +461,39 @@
         const modalImg = document.getElementById('modalImage');
         modalImg.src = img.src;
         modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
       });
     });
 
     document.querySelector('.close-img').addEventListener('click', () => {
       document.getElementById('imgModal').classList.remove('show');
+      document.body.style.overflow = 'auto';
     });
 
     document.getElementById('imgModal').addEventListener('click', e => {
-      if (e.target.id === 'imgModal') {
+      if (e.target === e.currentTarget) {
         e.currentTarget.classList.remove('show');
+        document.body.style.overflow = 'auto';
       }
     });
+
+    // Анимация при прокрутке
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.fade-in');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (elementPosition < screenPosition) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
   </script>
 </body>
 </html>
