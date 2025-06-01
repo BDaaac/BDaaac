@@ -1,4 +1,3 @@
-![Header](https://github.com/BDaaac/BDaaac/blob/main/github-header.png)
 
 # Dimash Bekeshev  
 ### Data Science Enthusiast | Python & FastAPI Developer | Backend Engineer  
