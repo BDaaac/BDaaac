@@ -12,7 +12,6 @@ I work with Python, FastAPI, PostgreSQL, Django, and I'm actively expanding into
 - REST API development (FastAPI, Django REST Framework)
 - Database management (PostgreSQL, SQL, MySQL)
 - Docker containerization and deployment
-- CI/CD and DevOps practices
 
 ---
 
