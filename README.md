@@ -1,6 +1,6 @@
 
 # Dimash Bekeshev  
-### Data Science Enthusiast | Python & FastAPI Developer | Backend Engineer  
+### Data Science Enthusiast | Python Developer | Backend Engineer  
 
 Hi! I'm Dimash — a Data Science student with a strong interest in analytics, web development, and backend engineering.  
 I work with Python, FastAPI, PostgreSQL, Django, and I'm actively expanding into APIs, DevOps, and automation.
