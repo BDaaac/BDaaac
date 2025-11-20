@@ -14,6 +14,13 @@ I work with Python, FastAPI, PostgreSQL, Django, and I'm actively expanding into
 - Docker containerization and deployment
 
 ---
+## 🏆 Achievements
+- Finalist of AI & ML hackathons  
+- Case Championship participant with ML/Analytics solutions  
+- Built and deployed commercial backend solutions  
+- 20+ completed courses in Python, ML, SQL  
+
+---
 
 ## 💼 Skills
 
@@ -74,15 +81,6 @@ I work with Python, FastAPI, PostgreSQL, Django, and I'm actively expanding into
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx)
 ![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=for-the-badge&logo=minio)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code)
-
-
----
-
-## 🏆 Achievements
-- Finalist of AI & ML hackathons  
-- Case Championship participant with ML/Analytics solutions  
-- Built and deployed commercial backend solutions  
-- 20+ completed courses in Python, ML, SQL  
 
 
 ---
