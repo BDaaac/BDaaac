@@ -17,50 +17,63 @@ I work with Python, FastAPI, PostgreSQL, Django, and I'm actively expanding into
 
 ## 💼 Skills
 
-### Languages
+### 🐍 Languages
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-### 📊 Data Analysis & Processing  
-- Exploratory Data Analysis (EDA)  
-- Feature engineering  
-- Data cleaning, preprocessing  
-- Outlier detection, scaling, encoding  
-- Statistics, probability, distributions  
+---
 
-### 🤖 Machine Learning  
-- Classification / Regression  
-- Model tuning (GridSearch, Optuna)  
-- Cross-validation & metrics  
-- XGBoost / LightGBM / RandomForest  
-- Unsupervised learning (KMeans, PCA)  
+### 📊 Data Analysis & Processing
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib)
+![Seaborn](https://img.shields.io/badge/Seaborn-16A085?style=for-the-badge)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly)
 
-### 📈 Visualization  
-- Matplotlib (pro-level)  
-- Seaborn  
-- Plotly (interactive dashboards)  
-- Heatmaps, correlation analysis, pairplots  
-- Building clean, publication-quality charts  
+---
 
-### Backend & Web
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![Django REST](https://img.shields.io/badge/DRF-ff1709?style=for-the-badge&logo=django&logoColor=white)
+### 🤖 Machine Learning
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn)
+![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge)
+![LightGBM](https://img.shields.io/badge/LightGBM-8BC34A?style=for-the-badge)
+![RandomForest](https://img.shields.io/badge/RandomForest-4CAF50?style=for-the-badge)
+![KMeans](https://img.shields.io/badge/KMeans-00A8E8?style=for-the-badge)
+![PCA](https://img.shields.io/badge/PCA-6A1B9A?style=for-the-badge)
 
-### Databases
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+---
 
-### 🐳 DevOps & Tools  
-- Docker & Docker Compose  
-- Linux (Ubuntu)  
-- Git & GitHub  
-- Nginx  
-- MinIO / S3  
-- VS Code (любовь навсегда)  
+### 📈 Visualization
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib)
+![Seaborn](https://img.shields.io/badge/Seaborn-16A085?style=for-the-badge)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly)
+![Dashboards](https://img.shields.io/badge/Dashboards-1A73E8?style=for-the-badge)
+
+---
+
+### ⚙️ Backend & Web
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django)
+![Django REST](https://img.shields.io/badge/DRF-ff1709?style=for-the-badge&logo=django)
+
+---
+
+### 🗄️ Databases
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite)
+
+---
+
+### 🐳 DevOps & Tools
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker)
+![Docker Compose](https://img.shields.io/badge/Compose-384d54?style=for-the-badge&logo=docker)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git)
+![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx)
+![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=for-the-badge&logo=minio)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code)
 
 
 ---
