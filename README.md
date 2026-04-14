@@ -68,17 +68,6 @@ I build production-grade ML pipelines, REST APIs, and data-driven applications �
 
 ---
 
-## Selected Projects
-
-| Project | Stack | Description |
-|---|---|---|
-| **Churn Prediction Pipeline** | CatBoost · SHAP · Pandas | 3-class churn model on 28M+ rows, cascading two-model architecture with SHAP explainability |
-| **PathoAI** | UNet++ · MAnet · EfficientNet-B4 | Medical biopsy image segmentation, val IoU ~0.83, ensemble of 3 models |
-| **QazGeoAI** | CatBoost · RuBERT · ChromaDB | Geospatial investment analysis platform for Kazakhstan regions, RAG + ML + interactive map |
-| **PMP Scraper** | Playwright · Python · CDP | Automated extraction from a React SPA via Chrome DevTools Protocol, 6 question types |
-
----
-
 ## Hackathon Track Record
 
 - **HackNU 2026** — DS track finalist, Higgsfield AI case (churn prediction)
