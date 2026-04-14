@@ -8,8 +8,6 @@
 
 ---
 
-<img align="right" width="340" src="https://github-readme-stats.vercel.app/api?username=BDaaac&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
-
 **About me**
 
 I'm a Data Science student based in Almaty, Kazakhstan.  
@@ -19,8 +17,6 @@ I build complete products end-to-end: from ML pipelines and multi-agent AI syste
 - Currently at EY Academy of Business
 - Competing in ML/DS hackathons as primary technical contributor
 - Languages: Kazakh (native) · Russian (C2) · English (B2)
-
-<br clear="right"/>
 
 ---
 
@@ -106,13 +102,17 @@ Marketing materials, brand identity compliance, digital asset management.
 
 <div align="center">
 
+<img src="https://github-profile-trophy.vercel.app/?username=BDaaac&theme=tokyonight&no-frame=true&no-bg=true&column=7" width="100%"/>
+
+<br/>
+
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BDaaac&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="160"/>
 <img src="https://streak-stats.demolab.com?user=BDaaac&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" height="160"/>
 
-</div>
+<br/>
 
-<div align="center">
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=BDaaac&theme=tokyonight" width="100%"/>
+
 </div>
 
 ---
