@@ -5,7 +5,6 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1000&color=4FC3F7&center=true&vCenter=true&width=750&lines=I+build+things+that+actually+ship+to+production;Multi-Agent+AI+%7C+RAG+%7C+CatBoost+%7C+FastAPI+%7C+Docker;From+28M+row+pipelines+to+live+web+products;19+y.o.+%C2%B7+Almaty%2C+Kazakhstan+%C2%B7+Open+to+work)](https://git.io/typing-svg)
 
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=BDaaac&left_color=1a1a2e&right_color=4FC3F7&left_text=profile%20views)
-![](https://img.shields.io/badge/Open%20to%20Work-2ea44f?style=flat&logo=checkmarx&logoColor=white)
 
 </div>
 
