@@ -113,12 +113,6 @@ Brand identity compliance, marketing materials, digital asset management.
 
 <img src="https://github-profile-trophy.vercel.app/?username=BDaaac&theme=tokyonight&no-frame=true&no-bg=true&column=7" width="100%"/>
 
-<br/><br/>
-
-<img src="https://github-readme-stats.vercel.app/api?username=BDaaac&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BDaaac&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="165"/>
-
-<br/>
 
 <img src="https://streak-stats.demolab.com?user=BDaaac&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" width="60%"/>
 
