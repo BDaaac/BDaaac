@@ -114,7 +114,6 @@ Brand identity compliance, marketing materials, digital asset management.
 <img src="https://github-profile-trophy.vercel.app/?username=BDaaac&theme=tokyonight&no-frame=true&no-bg=true&column=7" width="100%"/>
 
 
-<img src="https://streak-stats.demolab.com?user=BDaaac&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" width="60%"/>
 
 <br/><br/>
 
