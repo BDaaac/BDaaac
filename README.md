@@ -5,6 +5,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1000&color=4FC3F7&center=true&vCenter=true&width=750&lines=I+build+things+that+actually+ship+to+production;Multi-Agent+AI+%7C+RAG+%7C+CatBoost+%7C+FastAPI+%7C+Docker;From+28M+row+pipelines+to+live+web+products;19+y.o.+%C2%B7+Almaty%2C+Kazakhstan+%C2%B7+Open+to+work)](https://git.io/typing-svg)
 
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=BDaaac&left_color=1a1a2e&right_color=4FC3F7&left_text=profile%20views)
+![](https://img.shields.io/badge/Open%20to%20Work-2ea44f?style=flat&logo=checkmarx&logoColor=white)
 
 </div>
 
@@ -113,10 +114,18 @@ Brand identity compliance, marketing materials, digital asset management.
 
 <img src="https://github-profile-trophy.vercel.app/?username=BDaaac&theme=tokyonight&no-frame=true&no-bg=true&column=7" width="100%"/>
 
+<br/><br/>
 
+<img src="https://github-readme-stats.vercel.app/api?username=BDaaac&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" height="165"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BDaaac&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="165"/>
+
+<br/>
+
+<img src="https://streak-stats.demolab.com?user=BDaaac&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" width="60%"/>
 
 <br/><br/>
 
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=BDaaac&theme=tokyo-night&hide_border=true&area=true" width="100%"/>
 
 <br/>
 
